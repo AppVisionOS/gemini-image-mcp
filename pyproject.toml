@@ -1,0 +1,21 @@
+[project]
+name = "gemini-image-mcp"
+version = "0.1.0"
+description = "Gemini Image (Nano Banana) MCP Server – direct Google AI Studio API for Claude Code"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "google-genai>=0.8.0",
+    "pillow>=10.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.scripts]
+gemini-image-mcp = "gemini_image_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gemini_image_mcp"]
