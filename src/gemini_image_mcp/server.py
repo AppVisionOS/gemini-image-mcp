@@ -29,8 +29,10 @@ mcp = FastMCP("gemini-image")
 
 DEFAULT_MODEL = os.environ.get(
     "GEMINI_IMAGE_MODEL",
-    # Nano Banana 2 model id; update when Google ships a new version.
-    "gemini-2.5-flash-image-preview",
+    # Nano Banana Pro (= fal.ai's "nano-banana-2"). Update when Google ships a new version.
+    # Other current options on AI Studio: gemini-2.5-flash-image (cheap stable),
+    # gemini-3.1-flash-image-preview (newer flash tier).
+    "gemini-3-pro-image-preview",
 )
 OUTPUT_DIR = Path(
     os.environ.get("GEMINI_IMAGE_OUTPUT_DIR", "/tmp/gemini-images")
